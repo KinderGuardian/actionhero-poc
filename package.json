@@ -1,0 +1,36 @@
+{
+  "author": "matt@kinderguardian.me",
+  "name": "ActionheroPOC",
+  "description": "POC using Actionhero framework",
+  "version": "0.0.1",
+  "homepage": "",
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "engines": {
+    "node": ">=0.11.9"
+  },
+  "dependencies": {
+    "actionHero": "7.1.1",
+    "co": "~3.0.4",
+    "q": "~1.0.0",
+    "node-uuid": "~1.4.1",
+    "thunkify": "~0.0.1",
+    "winston": "~0.7.2",
+    "couchbase": "~1.2.1" 
+  },
+  "devDependencies": {
+    "mocha": "~1.17.1",
+    "should": "~3.1.2",
+    "request": "~2.34.0"
+  },
+  "scripts": {
+    "start": "node ./node_modules/actionHero/bin/actionHero start",
+    "startCluster": "node ./node_modules/actionHero/bin/actionHero startCluster",
+    "actionHero": "node ./node_modules/actionHero/bin/actionHero",
+    "help": "node ./node_modules/actionHero/bin/actionHero help",
+    "test": "make test",
+    "install": ""
+  }
+}
