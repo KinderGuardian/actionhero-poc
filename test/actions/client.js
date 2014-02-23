@@ -2,7 +2,7 @@ process.env.NODE_ENV = 'test';
 
 var should = require('should');
 var request = require('request');
-var actionheroPrototype = require("actionhero").actionHeroPrototype;
+var actionheroPrototype = require("actionhero").actionheroPrototype;
 var actionhero = new actionheroPrototype();
 var api;
 var url;
