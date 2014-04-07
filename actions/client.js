@@ -183,6 +183,7 @@ function *changePin(api, connection) {
  ******************************************************************************
  */
 
+/*
 
 // Create a key for each session and use a counter in CB 
 // to increment session time
@@ -283,9 +284,11 @@ exports.endSession = {
   }
 };
 
-exports.offlineSession = {
-  name: 'offlineSession',
-  description: 'offlineSession',
+*/
+
+exports.logSession = {
+  name: 'logSession',
+  description: 'logSession',
   inputs: {
     required: ['apiKey', 'deviceUuid', 'timestamp', 'duration'],
     optional: ['playerUuid', 'metadata', 'events'],
@@ -313,8 +316,8 @@ exports.logPurchase = {
   name: 'logPurchase',
   description: 'logPurchase',
   inputs: {
-    required: ['apiKey', 'sessionId', 'amount', 'currencyCode'],
-    optional: []
+    required: ['apiKey', 'deviceUuid', 'sessionId', 'amount', 'currencyCode'],
+    optional: ['playerUuid']
   },
   blockedConnectionTypes: [],
   outputExample: {
@@ -337,6 +340,7 @@ exports.logPurchase = {
   }
 };
 
+/*
 function *offlineStart(api, connection) {
   connection.rawConnection.responseHttpCode = 501;
   api.exception.raise('NOT_IMPLEMENTED');
@@ -352,12 +356,14 @@ function *extendSession(api, connection) {
   api.exception.raise('NOT_IMPLEMENTED');
 };
 
-function *offlineDump(api, connection) {
+function *endSession(api, connection) {
   connection.rawConnection.responseHttpCode = 501;
   api.exception.raise('NOT_IMPLEMENTED');
 };
 
-function *endSession(api, connection) {
+*/
+
+function *offlineDump(api, connection) {
   connection.rawConnection.responseHttpCode = 501;
   api.exception.raise('NOT_IMPLEMENTED');
 };

@@ -190,6 +190,7 @@ describe('Server: Web', function() {
     it('newPin should not simple sequential numbers'); 
   })
 
+/*
   describe('action: startSession', function() {
     before(function(done) {
       done();
@@ -275,7 +276,9 @@ describe('Server: Web', function() {
 
   })
 
-  describe('action: offlineSession', function() {
+*/
+
+  describe('action: logSession', function() {
     before(function(done) {
       done();
     })
@@ -285,11 +288,11 @@ describe('Server: Web', function() {
     })
 
     it('should require an apiKey', function(done) {
-      checkApiKey('/api/offlineSession', done);
+      checkApiKey('/api/logSession', done);
     })
 
     it('should return a not implemented error', function(done) {
-      checkNotImplemented('/api/offlineSession?apiKey=12345&email=matt.pichette%40gmail.com&passwordHash=dddadasd', done);   
+      checkNotImplemented('/api/logSession?apiKey=12345&email=matt.pichette%40gmail.com&passwordHash=dddadasd', done);   
     })
 
     it('should require a duration');
@@ -322,6 +325,10 @@ describe('Server: Web', function() {
     it('should return a not implemented error', function(done) {
       checkNotImplemented('/api/logPurchase?apiKey=12345&email=matt.pichette%40gmail.com&passwordHash=dddadasd', done);   
     })
+
+    it('should debit player account if playerUuid provided');
+
+    it('should return error if player account does not have sufficient balance');
   })
 
   describe('action: setLimits', function() {

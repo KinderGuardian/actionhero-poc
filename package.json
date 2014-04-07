@@ -26,11 +26,10 @@
     "request": "~2.34.0"
   },
   "scripts": {
-    "start": "node ./node_modules/actionHero/bin/actionHero start",
-    "startCluster": "node ./node_modules/actionHero/bin/actionHero startCluster",
+    "start": "node --harmony ./node_modules/actionHero/bin/actionHero start",
+    "startCluster": "node --harmony ./node_modules/actionHero/bin/actionHero startCluster",
     "actionHero": "node ./node_modules/actionHero/bin/actionHero",
     "help": "node ./node_modules/actionHero/bin/actionHero help",
-    "test": "make test",
-    "install": ""
+    "test": "./node_modules/.bin/mocha --harmony --recursive --reporter nyan"
   }
 }
