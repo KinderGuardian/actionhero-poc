@@ -1,5 +1,4 @@
-exports.models = function(api, next){
-
+exports.model = function (api, next) {
   var Player = require('../model/player.js');
   api.player = new Player();
 
@@ -8,6 +7,7 @@ exports.models = function(api, next){
 
   var Exception = require('../model/exception.js');
   api.exception = new Exception();
-
+  
   next();
 }
+
